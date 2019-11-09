@@ -250,6 +250,9 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
 }
 
 button,
