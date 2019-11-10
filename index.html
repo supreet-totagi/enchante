@@ -121,6 +121,10 @@ html { scroll-behavior: smooth; }
       margin-top: 30px;
       padding-right: 50px;
     }
+    .qr-code {
+      display: none;
+      padding: 0 16px;
+    }
 
   </style>
 
@@ -169,8 +173,18 @@ html { scroll-behavior: smooth; }
   }
 
   function bookedSuccess() {
-    alert("Your table has been booked successfully!")
-    $('#bookRestaurant').modal('hide')
+    // alert("Your table has been booked successfully!")
+    // $('#bookRestaurant').modal('hide')
+
+    $('.modalDialog').show()
+    modalLoading.init(true);
+    $('.replacable-book').hide()
+    $('#findTableBtn').hide()
+    setTimeout(function(){
+      console.log('timeouting');
+        $('.modalDialog').hide()
+        $('.qr-code').show()
+    }, 1000);
   }
 
   </script>
@@ -656,8 +670,8 @@ html { scroll-behavior: smooth; }
         </button>
       </div>
       <div class="modal-body" style="padding-top: 10px;">
-        <div class="row">
           <img src="img/resto-details.png" style="margin: 0 0 40px 10px;" width="600"/>
+          <div class="row replacable-book">
           <div class="col-lg-6">
             <img src="img/seatmap.jpg" width="400px"/>
           </div>
@@ -665,10 +679,19 @@ html { scroll-behavior: smooth; }
             <img src="img/booking.png" width="300px" style="margin-left: 20px"/>
           </div>
         </div>
+        <div class="qr-code">
+          <h3>
+            Your table has been booked!
+          </h3>
+          <p>We have sent you thead confirmation email along with below QR Code. Please use it
+            to confirm your booking at the restaurant.<p>
+          <div style="text-align: center"><img src="img/qrcode.png" width="200"/><div>
+        </div>
+      </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="bookedSuccess()">Find a Table</button>
+        <button id="findTableBtn" type="button" class="btn btn-primary" onclick="bookedSuccess()">Find a Table</button>
       </div>
     </div>
   </div>
