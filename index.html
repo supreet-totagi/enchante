@@ -116,6 +116,11 @@ html { scroll-behavior: smooth; }
       color: #000;
       border-top: 1px solid rgb(0,0,0,0.3);
     }
+    .book-btn {
+      text-align: right;
+      margin-top: 30px;
+      padding-right: 50px;
+    }
 
   </style>
 
@@ -161,6 +166,11 @@ html { scroll-behavior: smooth; }
     $('.map-1').hide();
     $('.map-2').hide();
     $('.map-3').show();
+  }
+
+  function bookedSuccess() {
+    alert("Your table has been booked successfully!")
+    $('#bookRestaurant').modal('hide')
   }
 
   </script>
@@ -224,7 +234,7 @@ html { scroll-behavior: smooth; }
       </div> -->
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Discover by Themes</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Discover by Experiences</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -457,18 +467,27 @@ html { scroll-behavior: smooth; }
           </div>
       </div>
     		    </div>
-        		<div class="col-md-7 map-box mx-0 px-0 map-1">
-        		    <iframe src="https://www.google.com/maps/embed?pb=!4v1573296100433!6m8!1m7!1sCAoSLEFGMVFpcE1QZFJtcjZxOTBwUXBuVWhFRnVpamZvOS1hRlBpU3FYOW5tcWxD!2m2!1d55.952223163018!2d-3.2027772666006!3f359.4197063051694!4f-25.4036716456489!5f0.7820865974627469" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        		</div>
-            <div class="col-md-7 map-box mx-0 px-0 map-2">
-              <iframe src="https://www.google.com/maps/embed?pb=!4v1573361244442!6m8!1m7!1sLiB9fLcRi4EAAAQZWXZHrg!2m2!1d53.48026413150799!2d-2.250647547770086!3f59.6!4f-0.6700000000000017!5f0.4000000000000002" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-            <div class="col-md-7 map-box mx-0 px-0 map-3">
-              <iframe src="https://www.google.com/maps/embed?pb=!4v1573361805111!6m8!1m7!1sCAoSLEFGMVFpcE95UTNxMkp1Uk91R21uWkhIaWE0UnlmQ3VsNzg1Zjh5NHBhZ3l3!2m2!1d53.18921646470474!2d-2.888546767909929!3f5.67!4f-0.7000000000000028!5f0.4000000000000002" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            <div class="col-md-7 map-box mx-0 px-0">
+              <div class="map-1">
+                  <iframe src="https://www.google.com/maps/embed?pb=!4v1573296100433!6m8!1m7!1sCAoSLEFGMVFpcE1QZFJtcjZxOTBwUXBuVWhFRnVpamZvOS1hRlBpU3FYOW5tcWxD!2m2!1d55.952223163018!2d-3.2027772666006!3f359.4197063051694!4f-25.4036716456489!5f0.7820865974627469" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
+              <div class="map-2">
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1573361244442!6m8!1m7!1sLiB9fLcRi4EAAAQZWXZHrg!2m2!1d53.48026413150799!2d-2.250647547770086!3f59.6!4f-0.6700000000000017!5f0.4000000000000002" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
+              <div class="map-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!4v1573361805111!6m8!1m7!1sCAoSLEFGMVFpcE95UTNxMkp1Uk91R21uWkhIaWE0UnlmQ3VsNzg1Zjh5NHBhZ3l3!2m2!1d53.18921646470474!2d-2.888546767909929!3f5.67!4f-0.7000000000000028!5f0.4000000000000002" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+              </div>
             </div>
     	  </div>
       </div>
     </section>
+
+    <div class="col align-self-end book-btn">
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#bookRestaurant">
+        Book This Restaurant
+      </button>
+    </div>
+
     </div>
   </section>
 
@@ -625,6 +644,35 @@ html { scroll-behavior: smooth; }
       <i class="fa fa-chevron-up"></i>
     </a>
   </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="bookRestaurant" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">The Leopard at des Artistes</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="padding-top: 10px;">
+        <div class="row">
+          <img src="img/resto-details.png" style="margin: 0 0 40px 10px;" width="600"/>
+          <div class="col-lg-6">
+            <img src="img/seatmap.jpg" width="400px"/>
+          </div>
+          <div class="col-lg-6">
+            <img src="img/booking.png" width="300px" style="margin-left: 20px"/>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" onclick="bookedSuccess()">Find a Table</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
