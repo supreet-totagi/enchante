@@ -8,56 +8,17 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Enchanté</title>
+  <title>Freelancer - Start Bootstrap Theme</title>
 
   <!-- Custom fonts for this theme -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.6/dist/loadingoverlay.min.js"></script>
-  <script src="vendor/modalLoading.min.js"></script>
 
   <!-- Theme CSS -->
   <link href="css/freelancer.min.css" rel="stylesheet">
 
   <style>
-  @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700');
-
-/* h2{float:left; width:100%; color:#fff; margin-bottom:40px; font-size: 14px; position:relartive; z-index:3; margin-top:30px}
-h2 span{font-family: 'Libre Baskerville', serif; display:block; font-size:45px; text-transform:none; margin-bottom:20px; margin-top:30px; font-weight:700}
-h2 a{color:#fff; font-weight:bold;} */
-html { scroll-behavior: smooth; }
-.head{float:left;width:100%;}
-.search-box{
-  margin-top: 30px;
-  -webkit-box-shadow: 0px 4px 20px 6px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 4px 20px 6px rgba(0,0,0,0.75);
-  box-shadow: 0px 4px 20px 6px rgba(0,0,0,0.5);
-  margin: 0 40px;
-}
-.listing-block{background:#fff; height:600px; padding-top:20px; overflow-y:scroll;}
-.slimScrollDiv{width:41%!important;}
-.media {background:#fff; position:relative; margin-bottom:15px; cursor: pointer;}
-.media img{width:200px;margin:0; height:136px;}
-.media-body{border:1px solid #bcbcbc; border-left:0; height:136px;}
-.media .price{float:left; width:100%; font-size:20px;font-weight:600; color:#4765AB;}
-.media .price small{display:block; font-size:17px; color:#232323;}
-.media .stats{float:left; width:100%; margin-top:10px;}
-.media .stats span{float:left; margin-right:10px; font-size:15px;}
-.media .stats span i{margin-right:7px; color:#4765AB;}
-.media .address{float:left; width:100%;font-size:14px; margin-top:5px; color:#888;}
-.media .address i{
-  margin-right: 6px;
-  font-weight: bold;
-}
-.media .fav-box{position:absolute; right:10px; font-size:20px; top:4px; color:#E74C3C;}
-
-.map-box{background-color:#A3CCFF;}
     #myVideo {
       position: fixed;
       right: 0;
@@ -74,91 +35,7 @@ html { scroll-behavior: smooth; }
       width: 100%;
       height: 100vh;
     }
-    .check-mark {
-      display: none;
-      position: absolute;
-      right: 0;
-      top: 0;
-      opacity: 0.8
-    }
-    .search-button {
-      position: absolute;
-      top: 96px;
-      left: 84px;
-      color: white;
-      font-size: 26px;
-    }
-    .search-button i {
-      position: absolute;
-      top: -20px;
-      padding-left: 19px;
-    }
-    .navbar-brand {
-      font-size: 1.25em !important;
-    }
-    .portfolio {
-      margin-top: 40px;
-    }
-    .location-search-box {
-        width: 500px;
-    }
-    .map-2 {
-      display: none;
-    }
-    .map-3 {
-      display: none;
-    }
-    .media .stats span .fa-star {
-      color: #ca0404;
-    }
-
   </style>
-
-  <script>
-
-  $(document).ready(function() {
-
-  });
-
-
-  $(function(){
-      $('.listing-block').slimScroll({
-          height: '500px'
-      });
-  });
-
-  function searchItems() {
-    $('.modalDialog').show()
-    modalLoading.init(true);
-    // Hide it after 3 seconds
-    setTimeout(function(){
-      console.log('timeouting');
-        $('.modalDialog').hide()
-        location.hash = "#contact";
-    }, 3000);
-  }
-
-  function toggleSelection(id) {
-    $(id).toggle()
-  }
-
-  function mapSelection1(id) {
-    $('.map-2').hide();
-    $('.map-3').hide();
-    $('.map-1').show();
-  }
-  function mapSelection2(id) {
-    $('.map-1').hide();
-    $('.map-3').hide();
-    $('.map-2').show();
-  }
-  function mapSelection3(id) {
-    $('.map-1').hide();
-    $('.map-2').hide();
-    $('.map-3').show();
-  }
-
-  </script>
 
 </head>
 
@@ -166,10 +43,9 @@ html { scroll-behavior: smooth; }
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-    <div class="container-fluid">
+    <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <img src="img/logo.png" width=120/>
-        Enchanté
       </a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -177,7 +53,7 @@ html { scroll-behavior: smooth; }
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item mx-0 mx-lg-1">
+          <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
@@ -185,21 +61,6 @@ html { scroll-behavior: smooth; }
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Contact</a>
-          </li> -->
-          <li>
-            <div class="input-group mb-3 location-search-box">
-              <div class="input-group-prepend">
-                <span class="input-group-text">
-                  <i class="fa fa-map-marker"></i>
-                </span>
-              </div>
-              <input type="text" class="form-control" placeholder="Enter a location" value="New York, NY, USA">
-              <div class="input-group-append">
-                <span class="input-group-text">
-                  <i class="fa fa-location-arrow"></i>
-                </span>
-              </div>
-            </div>
           </li>
         </ul>
       </div>
@@ -210,16 +71,16 @@ html { scroll-behavior: smooth; }
 
   <!-- Portfolio Section -->
   <section class="page-section portfolio" id="portfolio">
-    <div class="container-fluid">
+    <div class="container">
 
-      <!-- <video autoplay muted loop id="myVideo">
+      <video autoplay muted loop id="myVideo">
         <source src="video/interior.mp4#t=15,100" type="video/mp4">
       </video>
       <div class="video-overlay">
-      </div> -->
+      </div>
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Discover by Themes</h2>
+      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
@@ -234,38 +95,32 @@ html { scroll-behavior: smooth; }
       <div class="row">
 
         <!-- Portfolio Item 1 -->
-        <div class="col-lg-3">
-          <div class="portfolio-item mx-auto" data-target="#portfolioModal1" onclick="toggleSelection(first)">
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio/cabin.png" alt="">
-            <div id="first" class="check-mark">
-              <img class="check-overlay" src="img/portfolio/blank.jpg">
-            </div>
           </div>
         </div>
 
         <!-- Portfolio Item 2 -->
-        <div class="col-lg-3">
-          <div class="portfolio-item mx-auto" data-target="#portfolioModal2" onclick="toggleSelection(second)">
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
             <img class="img-fluid" src="img/portfolio/cake.png" alt="">
-            <div id="second" class="check-mark">
-              <img class="check-overlay" src="img/portfolio/blank.jpg">
-            </div>
           </div>
         </div>
 
         <!-- Portfolio Item 3 -->
-        <div class="col-lg-3">
-          <div class="portfolio-item mx-auto" data-target="#portfolioModal3">
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
@@ -276,194 +131,44 @@ html { scroll-behavior: smooth; }
         </div>
 
         <!-- Portfolio Item 4 -->
-        <div class="col-lg-3">
-          <div class="portfolio-item mx-auto" data-target="#portfolioModal4">
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/sports.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/game.png" alt="">
           </div>
         </div>
 
         <!-- Portfolio Item 5 -->
-        <div class="col-lg-3">
-          <div class="portfolio-item mx-auto" data-target="#portfolioModal5">
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/city.jpg" alt="">
+            <img class="img-fluid" src="img/portfolio/safe.png" alt="">
           </div>
         </div>
 
         <!-- Portfolio Item 6 -->
-        <div class="col-lg-3">
-          <div class="portfolio-item mx-auto" data-target="#portfolioModal6">
+        <div class="col-md-6 col-lg-4">
+          <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
               <div class="portfolio-item-caption-content text-center text-white">
                 <i class="fas fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/garden.jpg" alt="">
-          </div>
-        </div>
-
-        <!-- Portfolio Item 7 -->
-        <div class="col-lg-3">
-          <div class="portfolio-item mx-auto" data-target="#portfolioModal6">
-            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div>
-            <img class="img-fluid" src="img/portfolio/birthday.jpg" alt="">
-          </div>
-        </div>
-
-        <div class="col-lg-3">
-            <div class="portfolio-item mx-auto" data-target="#portfolioModal6" onclick="searchItems()">
-            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-              <div class="portfolio-item-caption-content text-center text-white">
-                <i class="fas fa-plus fa-3x"></i>
-              </div>
-            </div> -->
-            <img class="img-fluid" src="img/portfolio/blank.jpg" alt="">
-            <div id="searchButton" class="search-button">
-              <span>SEARCH <i class="fas fa-arrow-right fa-3x"></i></span>
-            </div>
+            <img class="img-fluid" src="img/portfolio/submarine.png" alt="">
           </div>
         </div>
 
       </div>
       <!-- /.row -->
 
-    </div>
-  </section>
-
-  <section class="page-section" id="contact">
-    <div class="container-fluid">
-
-
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Results matching your interests</h2>
-
-      <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
-      </div>
-
-      <section class="search-box">
-        <div class="container-fluid">
-    	     <div class="row">
-    		       <div class="col-md-5 listing-block">
-                  <div class="media" onclick="mapSelection1()">
-                    <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-                    <img class="d-flex align-self-start" src="https://images.otstatic.com/prod/26157964/1/medium.jpg" alt="Generic placeholder image">
-                    <div class="media-body pl-3">
-                      <div class="price">The Leopard at des Artistes<small>New York</small></div>
-                      <div class="stats">
-                          <span>
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>1711 reviews
-                          </span>
-                      </div>
-                      <div class="address"><i class="fa fa-chart-line"></i>Booked 51 times today</div>
-                    </div>
-                </div>
-                <div class="media" onclick="mapSelection2()">
-                  <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-                  <img class="d-flex align-self-start" src="https://resizer.otstatic.com/v2/photos/medium/24399333.jpg" alt="Generic placeholder image">
-                  <div class="media-body pl-3">
-                    <div class="price">Joanne Trattoria<small>New York</small></div>
-                    <div class="stats">
-                        <span>
-                          <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                          <i class="fa fa-star"></i>1245 reviews
-                        </span>
-                    </div>
-                    <div class="address"><i class="fa fa-chart-line"></i>Booked 40 times today</div>
-                  </div>
-              </div>
-              <div class="media" onclick="mapSelection3()">
-                <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-                <img class="d-flex align-self-start" src="https://resizer.otstatic.com/v2/photos/medium/23891714.jpg" alt="Generic placeholder image">
-                <div class="media-body pl-3">
-                  <div class="price">The Mermaid Inn Uptown<small>New York</small></div>
-                  <div class="stats">
-                      <span>
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                        <i class="fa fa-star-half"></i>1420 reviews
-                      </span>
-                  </div>
-                  <div class="address"><i class="fa fa-chart-line"></i>Booked 26 times today</div>
-                </div>
-            </div>
-            <div class="media">
-              <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-              <img class="d-flex align-self-start" src="https://resizer.otstatic.com/v2/photos/medium/25247950.jpg" alt="Generic placeholder image">
-              <div class="media-body pl-3">
-                <div class="price">Crave Fishbar - UWS<small>New York</small></div>
-                <div class="stats">
-                    <span>
-                      <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                      <i class="fa fa-star"></i>1620 reviews
-                    </span>
-                </div>
-                <div class="address"><i class="fa fa-chart-line"></i>Booked 52 times today</div>
-              </div>
-          </div>
-          <div class="media">
-            <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-            <img class="d-flex align-self-start" src="https://resizer.otstatic.com/v2/photos/medium/23692732.jpg" alt="Generic placeholder image">
-            <div class="media-body pl-3">
-              <div class="price">STK - NYC - Midtown<small>New York</small></div>
-              <div class="stats">
-                  <span>
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                    </i>821 reviews
-                  </span>
-              </div>
-              <div class="address"><i class="fa fa-chart-line"></i>Booked 22 times today</div>
-            </div>
-        </div>
-        <div class="media">
-          <div class="fav-box"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-          <img class="d-flex align-self-start" src="https://images.otstatic.com/prod/27412642/3/medium.jpg" alt="Generic placeholder image">
-          <div class="media-body pl-3">
-            <div class="price">Philippe Chow - Uptown<small>New York</small></div>
-            <div class="stats">
-                <span>
-                  <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                  <i class="fa fa-star"></i><i class="fa fa-star"></i>
-                  744 reviews
-                </span>
-            </div>
-            <div class="address"><i class="fa fa-chart-line"></i>Booked 21 times today</div>
-          </div>
-      </div>
-    		    </div>
-        		<div class="col-md-7 map-box mx-0 px-0 map-1">
-        		    <iframe src="https://www.google.com/maps/embed?pb=!4v1573296100433!6m8!1m7!1sCAoSLEFGMVFpcE1QZFJtcjZxOTBwUXBuVWhFRnVpamZvOS1hRlBpU3FYOW5tcWxD!2m2!1d55.952223163018!2d-3.2027772666006!3f359.4197063051694!4f-25.4036716456489!5f0.7820865974627469" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        		</div>
-            <div class="col-md-7 map-box mx-0 px-0 map-2">
-              <iframe src="https://www.google.com/maps/embed?pb=!4v1573361244442!6m8!1m7!1sLiB9fLcRi4EAAAQZWXZHrg!2m2!1d53.48026413150799!2d-2.250647547770086!3f59.6!4f-0.6700000000000017!5f0.4000000000000002" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-            <div class="col-md-7 map-box mx-0 px-0 map-3">
-              <iframe src="https://www.google.com/maps/embed?pb=!4v1573361805111!6m8!1m7!1sCAoSLEFGMVFpcE95UTNxMkp1Uk91R21uWkhIaWE0UnlmQ3VsNzg1Zjh5NHBhZ3l3!2m2!1d53.18921646470474!2d-2.888546767909929!3f5.67!4f-0.7000000000000028!5f0.4000000000000002" width="775" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-            </div>
-    	  </div>
-      </div>
-    </section>
     </div>
   </section>
 
